@@ -1,9 +1,18 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const Hero = () => {
   const headingRef = useRef(null);
   const descriptionRef = useRef(null);
   const buttonsRef = useRef(null);
+  const [text, setText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(150);
+  
+  const fullTexts = [
+    'Hi, I am Md Nazmun Hasan Nafees',
+    'DATA SCIENTIST & SWE'
+  ];
 
   useEffect(() => {
     const heading = headingRef.current;
@@ -35,17 +44,76 @@ const Hero = () => {
     }
   }, []);
 
+  useEffect(() => {
+    const handleTyping = () => {
+      const i = loopNum % fullTexts.length;
+      const fullText = fullTexts[i];
+
+      // Adjust typing speed based on whether we're typing or deleting
+      // Deleting is slower for a more visible effect
+      setTypingSpeed(isDeleting ? 80 : 150);
+
+      if (isDeleting) {
+        // Deleting text one character at a time
+        setText(fullText.substring(0, text.length - 1));
+      } else {
+        // Typing text one character at a time
+        setText(fullText.substring(0, text.length + 1));
+      }
+
+      // If we've finished typing the full text
+      if (!isDeleting && text === fullText) {
+        // Wait for 4 seconds if it's the name, 15 seconds if it's the title
+        const pauseTime = i === 0 ? 4000 : 15000;
+        
+        // After pause, start deleting
+        setTimeout(() => setIsDeleting(true), pauseTime);
+      } 
+      // If we've deleted all the text
+      else if (isDeleting && text === '') {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+      }
+    };
+
+    // Set up the typing interval
+    const timer = setTimeout(handleTyping, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [text, isDeleting, loopNum, typingSpeed, fullTexts]);
+
   return (
-    <section id="home" className="min-h-screen flex flex-col justify-center items-center pt-16 pb-8 px-4">
-      <div className="container mx-auto text-center">
+    <section 
+      id="home" 
+      className="min-h-screen flex flex-col justify-center items-center pt-16 pb-8 px-4 relative overflow-hidden"
+    >
+      {/* Background image with brightness filter */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: 'url(/hero_bg.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          filter: 'brightness(1.3) contrast(1.1)',
+          transform: 'scale(1.02)' // Slight scale to avoid white edges when applying filters
+        }}
+      ></div>
+      
+      {/* Semi-transparent overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      
+      <div className="container mx-auto text-center relative z-10">
         <h1 
           ref={headingRef} 
           className="text-4xl md:text-6xl font-bold mb-6 transform translate-y-10"
           style={{ lineHeight: '1.3' }}
         >
-          <span className="block">Hi, I am Md Nazmun Hasan Nafees</span>
-          <span className="block text-5xl md:text-7xl mt-4">DATA SCIENTIST</span>
-          <span className="block gradient-text text-5xl md:text-7xl">&amp; SWE</span>
+          <div className="h-24 flex items-center justify-center">
+            <span className={`inline-block ${loopNum % fullTexts.length === 1 ? 'gradient-text' : ''}`}>
+              {text}
+              <span className="animate-blink">|</span>
+            </span>
+          </div>
         </h1>
         
         <p 
