@@ -98,7 +98,7 @@ const Hero = () => {
             filter: 'brightness(1.4) contrast(1.05)',
           }}
         >
-          <source src="/bgm_video.mp4" type="video/mp4" />
+          <source src="/bgm_video_lite.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
