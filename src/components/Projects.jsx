@@ -36,35 +36,19 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'mlr_cpp',
-      description: 'Fast C++ Multiple Linear Regression library with Python API',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
-      github: 'https://github.com/nafeesnazeer/mlr_cpp',
+      title: 'Credit Card Fraud Detection',
+      description: 'Detect anomalies and fraudulent transactions using ML models',
+      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2070&auto=format&fit=crop',
+      github: 'https://github.com/blue-jays/fraud-detection',
       demo: null
     },
     {
       id: 2,
-      title: 'Exoplanet Exploration EDA',
-      description: 'Analyze and understand the properties of discovered exoplanets to uncover patterns',
-      image: 'https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?q=80&w=2074&auto=format&fit=crop',
-      github: 'https://github.com/nafeesnazeer/exoplanet-exploration',
-      demo: 'https://nafeesnazeer.github.io/exoplanet-exploration'
-    },
-    {
-      id: 3,
-      title: 'Credit Card Fraud Detection',
-      description: 'Detect anomalies and fraudulent transactions using ML models',
-      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2070&auto=format&fit=crop',
-      github: 'https://github.com/nafeesnazeer/fraud-detection',
-      demo: null
-    },
-    {
-      id: 4,
       title: 'Cloud-Native Task Manager',
       description: 'Full-stack web application with React, Node.js, and MongoDB deployed on AWS',
       image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop',
-      github: 'https://github.com/nafeesnazeer/task-manager',
-      demo: 'https://task-manager.nafeesnazeer.com'
+      github: 'https://github.com/blue-jays/task-manager',
+      demo: 'https://task-manager.nafees-hasan.com'
     }
   ];
 

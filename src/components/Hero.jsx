@@ -40,11 +40,12 @@ const Hero = () => {
       <div className="container mx-auto text-center">
         <h1 
           ref={headingRef} 
-          className="text-6xl md:text-8xl font-bold mb-6 transform translate-y-10"
-          style={{ lineHeight: '1.1' }}
+          className="text-4xl md:text-6xl font-bold mb-6 transform translate-y-10"
+          style={{ lineHeight: '1.3' }}
         >
-          <span className="block">DATA SCIENTIST</span>
-          <span className="block gradient-text">&amp; SWE</span>
+          <span className="block">Hi, I am Md Nazmun Hasan Nafees</span>
+          <span className="block text-5xl md:text-7xl mt-4">DATA SCIENTIST</span>
+          <span className="block gradient-text text-5xl md:text-7xl">&amp; SWE</span>
         </h1>
         
         <p 
@@ -73,7 +74,7 @@ const Hero = () => {
           </a>
           
           <a 
-            href="https://github.com/nafeesnazeer" 
+            href="https://github.com/blue-jays" 
             target="_blank" 
             rel="noopener noreferrer"
             className="gradient-border bg-primary hover:bg-secondary px-8 py-3 rounded-lg text-white font-medium transition-all duration-300 overflow-hidden group"
