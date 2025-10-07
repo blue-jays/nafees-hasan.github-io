@@ -53,8 +53,8 @@ const Education = () => {
             
             <div>
               <h3 className="text-2xl font-bold mb-1">Seneca Polytechnic</h3>
-              <h4 className="text-xl text-gray-300 mb-2">Honours Bachelor of Data Science and Software Engineering</h4>
-              <p className="text-gray-400">Sep 2023 - Aug 2027</p>
+              <h4 className="text-xl text-gray-300 mb-2">Bachelor's of Engineering in Software Engineering</h4>
+              <p className="text-gray-400">Sep 2022 - April 2027</p>
               
               <div className="mt-4 space-y-2">
                 <div className="flex items-center">

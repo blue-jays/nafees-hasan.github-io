@@ -86,21 +86,25 @@ const Hero = () => {
       id="home" 
       className="min-h-screen flex flex-col justify-center items-center pt-16 pb-8 px-4 relative overflow-hidden"
     >
-      {/* Background image with brightness filter */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: 'url(/hero_bg.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          filter: 'brightness(1.3) contrast(1.1)',
-          transform: 'scale(1.02)' // Slight scale to avoid white edges when applying filters
-        }}
-      ></div>
+      {/* Background video */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute w-full h-full object-cover"
+          style={{
+            filter: 'brightness(1.4) contrast(1.05)',
+          }}
+        >
+          <source src="/bgm_video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
       
-      {/* Semi-transparent overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      {/* Semi-transparent overlay - reduced opacity */}
+      <div className="absolute inset-0 bg-black bg-opacity-25"></div>
       
       <div className="container mx-auto text-center relative z-10">
         <h1 
