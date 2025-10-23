@@ -22,7 +22,7 @@ A modern, responsive portfolio website showcasing my skills, projects, and acade
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/nafeesnazeer/portfolio.git
+   git clone https://github.com/blue-jays/nafees-hasan.github-io.git 
    cd portfolio
    ```
 
