@@ -146,7 +146,7 @@ const Hero = () => {
           </a>
           
           <a 
-            href="https://github.com/blue-jays" 
+            href="https://github.com/nafees-hasan" 
             target="_blank" 
             rel="noopener noreferrer"
             className="gradient-border bg-primary hover:bg-secondary px-8 py-3 rounded-lg text-white font-medium transition-all duration-300 overflow-hidden group"
