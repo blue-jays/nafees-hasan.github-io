@@ -36,6 +36,15 @@ const MLOps = () => {
   const mlopsProjects = [
     {
       id: 1,
+      title: 'News Sentiment Bias Analyzer',
+      description: 'Production-grade ML system with Chrome Extension, FastAPI backend, and modular ML pipeline featuring SBERT embeddings, clustering, and bias detection',
+      image: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=2070&auto=format&fit=crop',
+      github: 'https://github.com/blue-jays/News_Bias_Check_Companion',
+      demo: null,
+      tags: ['MLOps', 'FastAPI', 'NLP', 'Chrome Extension']
+    },
+    {
+      id: 2,
       title: 'End-to-End ML Pipeline',
       description: 'Complete MLOps pipeline with CI/CD, model versioning, monitoring, and automated retraining',
       image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2034&auto=format&fit=crop',
@@ -44,7 +53,7 @@ const MLOps = () => {
       tags: ['MLOps', 'CI/CD', 'Docker', 'Kubernetes']
     },
     {
-      id: 2,
+      id: 3,
       title: 'Real-time ML Inference System',
       description: 'Scalable ML inference system with FastAPI, Redis caching, and Prometheus monitoring',
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
@@ -53,7 +62,7 @@ const MLOps = () => {
       tags: ['FastAPI', 'ML', 'Redis', 'Monitoring']
     },
     {
-      id: 3,
+      id: 4,
       title: 'Automated ML Model Registry',
       description: 'MLflow-based model registry with automated testing, versioning, and deployment workflows',
       image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2076&auto=format&fit=crop',
