@@ -35,6 +35,15 @@ const DataAnalysis = () => {
 
   const dataProjects = [
     {
+      id: 4,
+      title: 'Credit Card Fraud Pattern Analysis',
+      description: 'Helps banks spot suspicious card transactions early by finding patterns in when, where, and how fraud tends to happen.',
+      image: 'https://images.unsplash.com/photo-1523287562758-66c7fc58967a?q=80&w=2070&auto=format&fit=crop',
+      github: 'https://github.com/blue-jays/Credit_Card_Fraud_Detection_System',
+      demo: null,
+      tags: ['Python', 'Machine Learning', 'Fraud Detection']
+    },
+    {
       id: 1,
       title: 'Sales Data Analysis',
       description: 'Comprehensive analysis of sales data with interactive Power BI dashboards and insights',
@@ -60,15 +69,6 @@ const DataAnalysis = () => {
       github: 'https://github.com/blue-jays/customer-analysis',
       demo: null,
       tags: ['Data Analysis', 'Statistics', 'Power BI']
-    },
-    {
-      id: 4,
-      title: 'Credit Card Fraud Pattern Analysis',
-      description: 'Analysis of 100K+ credit card transactions using Python and Random Forest to uncover high-risk fraud behaviors in time, amount, channel, merchant category, and geography.',
-      image: 'https://images.unsplash.com/photo-1523287562758-66c7fc58967a?q=80&w=2070&auto=format&fit=crop',
-      github: 'https://github.com/blue-jays/Credit_Card_Fraud_Detection_System',
-      demo: null,
-      tags: ['Python', 'Machine Learning', 'Fraud Detection']
     }
   ];
 
