@@ -35,19 +35,19 @@ const Projects = () => {
 
   const projects = [
     {
+      id: 2,
+      title: 'Credit Card Fraud Pattern Analysis',
+      description: 'Helps banks spot suspicious card transactions early by finding patterns in when, where, and how fraud tends to happen.',
+      image: 'https://images.unsplash.com/photo-1523287562758-66c7fc58967a?q=80&w=2070&auto=format&fit=crop',
+      github: 'https://github.com/blue-jays/Credit_Card_Fraud_Detection_System',
+      demo: null
+    },
+    {
       id: 1,
       title: 'News Sentiment Bias Analyzer',
       description: 'Full-stack system analyzing news bias across outlets using Chrome Extension, FastAPI, and ML pipeline with MLOps principles',
       image: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=2070&auto=format&fit=crop',
       github: 'https://github.com/blue-jays/News_Bias_Check_Companion',
-      demo: null
-    },
-    {
-      id: 2,
-      title: 'Credit Card Fraud Detection',
-      description: 'Detect anomalies and fraudulent transactions using ML models',
-      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2070&auto=format&fit=crop',
-      github: 'https://github.com/blue-jays/fraud-detection',
       demo: null
     },
     {
