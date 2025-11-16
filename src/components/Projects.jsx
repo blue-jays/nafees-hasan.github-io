@@ -38,7 +38,7 @@ const Projects = () => {
       id: 2,
       title: 'Credit Card Fraud Pattern Analysis',
       description: 'Helps banks spot suspicious card transactions early by finding patterns in when, where, and how fraud tends to happen.',
-      image: 'https://images.unsplash.com/photo-1523287562758-66c7fc58967a?q=80&w=2070&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80',
       github: 'https://github.com/blue-jays/Credit_Card_Fraud_Detection_System',
       demo: null
     },
