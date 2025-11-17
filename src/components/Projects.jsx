@@ -40,7 +40,8 @@ const Projects = () => {
       description: 'Helps banks spot suspicious card transactions early by finding patterns in when, where, and how fraud tends to happen.',
       image: 'https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80',
       github: 'https://github.com/blue-jays/Credit_Card_Fraud_Detection_System',
-      demo: null
+      demo: null,
+      tags: ['Python', 'Machine Learning', 'Fraud Detection']
     },
     {
       id: 1,
@@ -48,7 +49,8 @@ const Projects = () => {
       description: 'Full-stack system analyzing news bias across outlets using Chrome Extension, FastAPI, and ML pipeline with MLOps principles',
       image: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=2070&auto=format&fit=crop',
       github: 'https://github.com/blue-jays/News_Bias_Check_Companion',
-      demo: null
+      demo: null,
+      tags: ['MLOps', 'FastAPI', 'NLP', 'Chrome Extension']
     },
     {
       id: 3,
@@ -56,7 +58,8 @@ const Projects = () => {
       description: 'Full-stack web application with React, Node.js, and MongoDB deployed on AWS',
       image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop',
       github: 'https://github.com/blue-jays/task-manager',
-      demo: 'https://task-manager.nafees-hasan.com'
+      demo: 'https://task-manager.nafees-hasan.com',
+      tags: ['React', 'Node.js', 'MongoDB', 'AWS']
     }
   ];
 
@@ -89,6 +92,17 @@ const Projects = () => {
               
               <h3 className="text-xl font-bold mb-2">{project.title}</h3>
               <p className="text-gray-300 mb-4">{project.description}</p>
+              
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project.tags.map((tag, index) => (
+                  <span 
+                    key={index}
+                    className="px-3 py-1 text-xs font-semibold rounded-full bg-gradient-to-r from-accent to-secondary text-white"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
               
               <div className="flex space-x-4">
                 <a 

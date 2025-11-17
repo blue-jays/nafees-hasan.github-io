@@ -44,24 +44,6 @@ const DataAnalysis = () => {
       tags: ['Python', 'Machine Learning', 'Fraud Detection']
     },
     {
-      id: 1,
-      title: 'Sales Data Analysis',
-      description: 'Comprehensive analysis of sales data with interactive Power BI dashboards and insights',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
-      github: 'https://github.com/blue-jays/sales-analysis',
-      demo: null,
-      tags: ['Power BI', 'CSV', 'Data Visualization']
-    },
-    {
-      id: 2,
-      title: 'Web Scraping & Analytics',
-      description: 'Automated web scraping pipeline with data cleaning and visualization in Power BI',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop',
-      github: 'https://github.com/blue-jays/web-scraping-analytics',
-      demo: null,
-      tags: ['Web Scraping', 'Python', 'Power BI']
-    },
-    {
       id: 3,
       title: 'Customer Behavior Analysis',
       description: 'Deep dive into customer behavior patterns using statistical analysis and visualization',
