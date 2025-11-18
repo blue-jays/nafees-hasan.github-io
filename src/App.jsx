@@ -2,6 +2,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Projects from './components/Projects'
 import DataAnalysis from './components/DataAnalysis'
+import StatisticalDataAnalysis from './components/StatisticalDataAnalysis'
 import MLOps from './components/MLOps'
 import Education from './components/Education'
 import Contact from './components/Contact'
@@ -14,6 +15,7 @@ function App() {
       <Hero />
       <Projects />
       <DataAnalysis />
+      <StatisticalDataAnalysis />
       <MLOps />
       <Education />
       <Contact />
