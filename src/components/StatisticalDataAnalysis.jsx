@@ -36,12 +36,12 @@ const StatisticalDataAnalysis = () => {
   const statisticalProjects = [
     {
       id: 1,
-      title: 'A/B Testing Platform',
-      description: 'Statistical framework for running controlled experiments and measuring the significance of changes in user behavior and conversion rates.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
-      github: 'https://github.com/blue-jays/ab-testing-framework',
+      title: 'Loan Default Risk Analysis',
+      description: 'Statistical analysis of 10,000 loans to quantify default risk, evaluate a new credit policy, and build a logistic regression risk model.',
+      image: 'https://images.unsplash.com/photo-1454166155302-ef4863c27e70?q=80&w=2070&auto=format&fit=crop',
+      github: 'https://github.com/blue-jays/Loan-Default-Risk-Analysis',
       demo: null,
-      tags: ['A/B Testing', 'Hypothesis Testing', 'Statistical Significance']
+      tags: ['Risk Modeling', 'Hypothesis Testing', 'Logistic Regression']
     },
     {
       id: 2,

@@ -60,6 +60,15 @@ const Projects = () => {
       github: 'https://github.com/blue-jays/task-manager',
       demo: 'https://task-manager.nafees-hasan.com',
       tags: ['React', 'Node.js', 'MongoDB', 'AWS']
+    },
+    {
+      id: 4,
+      title: 'Loan Default Risk Analysis',
+      description: 'Statistical analysis of 10,000 loans to quantify default risk, evaluate a new credit policy, and build a logistic regression risk model.',
+      image: 'https://images.unsplash.com/photo-1454166155302-ef4863c27e70?q=80&w=2070&auto=format&fit=crop',
+      github: 'https://github.com/blue-jays/Loan-Default-Risk-Analysis',
+      demo: null,
+      tags: ['Python', 'Statistics', 'Risk Modeling', 'Logistic Regression']
     }
   ];
 
