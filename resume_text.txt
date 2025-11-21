@@ -1,0 +1,51 @@
+ 
+ Md Nazmun Hasan Nafees  
+ nafeeshasan365@gmail.com  | (416)-662-9728  | LinkedIn:  Nafees -Hasan   |East York   
+OBJECTIVE      
+Detail -oriented and analytical Software Engineering student with a solid foundation in data science, machine learning, and 
+statistical analysis. Seeking a Data Scientist Intern role for Summer 2025 to apply expertise in data preprocessing, explorat ory 
+data analysis, and predictive modeling using  Python, SQL, and R.  Committed to contributing to impactful projects while 
+expanding knowledge in advanced analytics, feature engineering, and business decision -making through hands -on experience .  
+EDUCATION      
+Seneca Polytechnic                                Toronto, Ontario   
+Bachelor’s of Eng. In Software Engineering                                       Expected Graduation, September 2026  
+o Concentrations: Machine learning and Data Science  
+o Related Coursework:  Machine learning, Data Mining, Statistics, Programming, Object Oriented Programming, 
+Artificial Intelligence.   
+PROJECTS                                                                                                                                                         GitHub: blue -jays                                                                                                  
+Game Recommender System                                                                https://game -engine -753abe0961a7.herokuapp.com/    
+• Engineered a sophisticated  Recommendation System utilizing cosine similarity and  feature engineering , 
+enhancing user engagement metrics by 40%  through tailored game suggestions based on individual activity and 
+preferences . 
+• Successfully deployed the real -time recommendation system as an interactive web application using Streamlit, 
+achieving an uptime rate of 99.9% after hosting on Heroku .  
+ 
+Customer Segmentation of  Banking Sector                                                                                                             GitHub   
+• Conducted exploratory data analysis (EDA) to uncover key factors affecting customer decisions , including feature 
+correlations, distributions, using visualizations and statistical methods for targeted marketing insights.  
+• Optimized model performance with machine learning techniques, including Decision Trees and GridSearchCV , 
+achieving a 10 -Fold Cross -Validation mean accuracy of 80.52% .  
+• Provided actionable insights for marketing strategies  by focusing on seasonal trends and key customer attributes (e.g., 
+age, call duration), leading to optimized campaign targeting and informed decisions . 
+ 
+Loan Approval and Risk Prediction System                                                                                                                Github  
+• Developed a loan approval and risk prediction system  leveraging machine learning models like Logistic Regression, 
+Random Forest  classify loan applications based on features such as age, job, housing status, and financial accounts. 
+Conducted data cleaning, feature engineering , and exploratory data analysis to uncover insights into credit risk trends, 
+achieving high model accuracy and delivering a scalable solution for real -time loan evaluations.  
+ 
+Fraud Detection in Credit Card Transactions                                                                                                             Github   
+• Conducted in -depth analysis of over 500,000 transactional data  points to uncover critical fraud patterns , revealing that 
+time and amount accounted for 75% of fraudulent activities , thereby informing targeted intervention strategies.  
+• Proposed and developed a new enhanced flagging system that improved fraud detection efficiency by 40%, leading to 
+a reduction in false positives from 10% to just 6%.  
+• Utilized machine learning techniques on an imbalanced dataset comprising over 100,000 transactions, applying feature 
+importance analysis which identified transaction time as a significant predictor with an accuracy improvement of model 
+performance by 30% through  rigorous validation methods.  
+SKILLS      
+Programming Languages:  Python,  SQL, C, C++, HTML/CSS  
+Data Science & Machine Learning Tools:  Pandas, NumPy, Matplotlib, Seaborn, Scikit -learn, TensorFlow,  Jupyter Notebooks  
+Data Manipulation & Analysis:  Data Cleaning, Data Preprocessing, Exploratory Data Analysis (EDA), Feature Engineering, Data 
+Aggregation, Data  Validation, Data Visualization  
+Statistical Modeling : Experience with statistical analysis, data validation, and forecasting models . 
+Data Visualization & Reporting:  Excel (Charts & Tables, Data Validation), Matplotlib, Seaborn  
