@@ -132,7 +132,7 @@ const Hero = () => {
           className="flex flex-col sm:flex-row justify-center gap-6 transform translate-y-10"
         >
           <a 
-            href="/resume.pdf" 
+            href={`${import.meta.env.BASE_URL}resume.pdf`} 
             target="_blank" 
             rel="noopener noreferrer"
             className="gradient-border bg-primary hover:bg-secondary px-8 py-3 rounded-lg text-white font-medium transition-all duration-300 overflow-hidden group"
