@@ -1,0 +1,191 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez (template)
+% Customized for: Md Nazmun Hasan Nafees
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Md Nazmun Hasan Nafees} \\ \vspace{1pt}
+    \small Toronto, ON $|$ (416)-662-9728 $|$
+    \href{mailto:nafeeshasan365@gmail.com}{\underline{nafeeshasan365@gmail.com}} $|$
+    \href{https://www.linkedin.com/in/nafees-hasan}{\underline{linkedin.com/in/nafees-hasan}} $|$
+    \href{https://github.com/blue-jays}{\underline{github.com/blue-jays}}
+\end{center}
+
+%-----------OBJECTIVE-----------
+\section{Objective}
+\small{
+Detail-oriented and analytical Software Engineering student with a solid foundation in data science, machine learning, and statistical analysis. Seeking a Data Scientist Intern role for Summer 2025 to apply skills in data preprocessing, exploratory data analysis, and predictive modeling using Python and SQL. Committed to contributing to impactful projects while expanding knowledge in advanced analytics, feature engineering, and data-driven business decision-making.
+}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Seneca Polytechnic}{Toronto, ON}
+      {Bachelor of Engineering in Software Engineering}{ April 2027}
+        \resumeItemListStart
+          \resumeItem{\textbf{Concentrations:} Machine Learning, Data Science, Statistical Testing}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Montecassino Operations}{Toronto, ON}
+      {Data Analyst -- Banquet Hall Operations}{Apr. 2023 -- Present}
+      \resumeItemListStart
+        \resumeItem{Processed and analyzed statistical data to forecast trends and support actuarial decision-making using Excel, Python, and SQL for efficient data manipulation and reporting.}
+        \resumeItem{Identified operational inefficiencies, proposed data-backed solutions, and generated reports that support actuarial work, financial modeling, and cost-optimization initiatives.}
+        \resumeItem{Collaborated with operations staff to turn analysis into concrete changes in staffing, scheduling, and event planning, improving day-of readiness and reducing last-minute issues.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+
+    \resumeProjectHeading
+      {\textbf{News Sentiment Bias Analyzer} $|$ \emph{Chrome Extension, FastAPI, modular ML pipeline}}
+      {\href{https://github.com/blue-jays/News_Bias_Check_Companion}{GitHub}}
+      \resumeItemListStart
+        \resumeItem{Created an end-to-end MLOps system that ingests articles, clusters narratives, assigns political bias, and streams structured ``BiasView'' results to a Chrome extension in real time.}
+        \resumeItem{Implemented \textbf{multi-stage validation }(Pydantic, Great Expectations) plus monitoring (Evidently, Prometheus) to ensure reliable bias detection, sentiment scoring, and observability.}
+        \resumeItem{Designed a \textbf{bias-mapping layer} using external datasets (AllSides, Ad Fontes) to consistently tag outlets with political leaning and reliability scores, forming the backbone of downstream bias metrics.}
+      \resumeItemListEnd\
+
+
+    \resumeProjectHeading
+      {\textbf{Loan Default Risk Analysis} $|$ \emph{Statistical testing, logistic regression, policy evaluation}}
+      {\href{https://github.com/blue-jays/Loan-Default-Risk-Analysis}{GitHub}}
+      \resumeItemListStart
+        \resumeItem{Investigated 10K loans with regression, chi-square, and z-tests to isolate top risk drivers (credit score, debt-to-income ratio) and prove a stricter lending policy cut defaults from \textbf{6.5\% to 4.5\% (p = 0.002).}}
+        \resumeItem{Delivered a production-ready logistic regression model (AUC = 0.85) plus credit policy recommendations (score $\geq$ 620, DTI $\leq$ 40\%) to save \$3.46M per 10K loans.}
+        \resumeItem{Documented the statistical framework (power analysis, chi-square, two-proportion z-tests) to make policy and model recommendations transparent and audit-ready for business stakeholders.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Credit Card Fraud Pattern Analysis} $|$ \emph{Random Forest, feature engineering, Jupyter}}
+      {\href{https://github.com/blue-jays/Credit_Card_Fraud_Detection_System}{GitHub}}
+      \resumeItemListStart
+        \resumeItem{Analyzed 99K$+$ transactions to profile fraud across timing, amount, channel, merchant, and geography dimensions, revealing that \textbf{52\% of fraud} happens before 7 a.m. and 79\% stays under \pounds 35 for stealthy behavior.}
+        \resumeItem{Developed a reproducible Jupyter workflow for data cleaning, feature engineering, and model evaluation so risk teams can rerun the analysis on new transaction batches.}
+      \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages}{: Python, SQL, C, C++, HTML/CSS} \\
+     \textbf{Data Science \& ML Tools}{: Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, TensorFlow, Jupyter Notebooks} \\
+     \textbf{Data Manipulation \& Analysis}{: Data cleaning, preprocessing, EDA, feature engineering, aggregation, validation, visualization} \\
+     \textbf{Statistical Modeling}{: Forecasting techniques, statistical analysis, data validation} \\
+     \textbf{Data Visualization \& Reporting}{: Excel (charts/tables, validation), Matplotlib, Seaborn}
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
