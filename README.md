@@ -43,7 +43,6 @@ A modern, responsive portfolio website showcasing my skills, projects, and acade
 
 ## Deployment
 
-This project is configured for deployment to GitHub Pages:
 
 ```bash
 npm run deploy
