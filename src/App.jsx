@@ -1,7 +1,6 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Projects from './components/Projects'
-import DataAnalysis from './components/DataAnalysis'
 import StatisticalDataAnalysis from './components/StatisticalDataAnalysis'
 import MLOps from './components/MLOps'
 import Education from './components/Education'
@@ -14,7 +13,6 @@ function App() {
       <Navbar />
       <Hero />
       <Projects />
-      <DataAnalysis />
       <StatisticalDataAnalysis />
       <MLOps />
       <Education />

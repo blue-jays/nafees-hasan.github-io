@@ -74,8 +74,8 @@ const StatisticalDataAnalysis = () => {
         </h2>
         
         <p className="text-center text-gray-300 mb-12 max-w-3xl mx-auto">
-          Rigorous statistical methods for hypothesis testing, correlation analysis, A/B testing, 
-          and confidence interval estimation to drive data-driven decisions
+          Beyond vanilla data analysis—applying rigorous statistical testing methods, hypothesis validation, 
+          and inferential techniques to test claims and drive evidence-based conclusions with mathematical rigor
         </p>
         
         <div 
