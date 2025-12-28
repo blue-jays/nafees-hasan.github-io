@@ -74,8 +74,8 @@ const StatisticalDataAnalysis = () => {
         </h2>
         
         <p className="text-center text-gray-300 mb-12 max-w-3xl mx-auto">
-          Beyond vanilla data analysis—applying rigorous statistical testing methods, hypothesis validation, 
-          and inferential techniques to test claims and drive evidence-based conclusions with mathematical rigor
+          Beyond conventional data analysis—applying rigorous statistical testing methods, hypothesis validation, 
+          and inferential techniques to test claims and drive evidence-based conclusions with statistical rigor
         </p>
         
         <div 
