@@ -35,6 +35,15 @@ const Projects = () => {
 
   const projects = [
     {
+      id: 5,
+      title: 'End-to-End ML Pipeline',
+      description: 'Complete MLOps pipeline with CI/CD, model versioning, monitoring, and automated retraining',
+      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80',
+      github: 'https://github.com/blue-jays/MLOps_full_pipeline',
+      demo: null,
+      tags: ['MLOps', 'CI/CD', 'Docker', 'Kubernetes']
+    },
+    {
       id: 2,
       title: 'Credit Card Fraud Pattern Analysis',
       description: 'Helps banks spot suspicious card transactions early by finding patterns in when, where, and how fraud tends to happen.',
