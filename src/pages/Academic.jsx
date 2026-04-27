@@ -6,13 +6,11 @@ export default function Academic() {
         <div className="section-head">
           <div className="eyebrow">Background</div>
           <h1 className="section-title">
-            Academic <span className="ital" style={{ color: 'var(--ink-dim)' }}>&amp;</span> Experience
+            Academic
           </h1>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
-
-          <article className="card card-pad" style={{ padding: 32 }}>
+        <article className="card card-pad" style={{ padding: 32 }}>
             <div className="eyebrow" style={{ marginBottom: 18 }}>Education</div>
             <h3 style={{ fontSize: 22, fontWeight: 600, letterSpacing: '-0.015em', margin: '0 0 6px' }}>
               Seneca Polytechnic
@@ -34,27 +32,6 @@ export default function Academic() {
               <span className="tag">Software Architecture</span>
             </div>
           </article>
-
-          <article className="card card-pad" style={{ padding: 32 }}>
-            <div className="eyebrow" style={{ marginBottom: 18 }}>Experience</div>
-            <h3 style={{ fontSize: 22, fontWeight: 600, letterSpacing: '-0.015em', margin: '0 0 6px' }}>
-              Montecassino Retirement Residence
-            </h3>
-            <p style={{ fontSize: 14, color: 'var(--ink-dim)', margin: '0 0 22px' }}>Data Analyst</p>
-            <div className="profile-rows">
-              <div className="prow"><span>Period</span><span>Apr 2023 — Present</span></div>
-              <div className="prow"><span>Type</span><span>Part-time / Co-op</span></div>
-              <div className="prow"><span>Location</span><span>Toronto, Ontario</span></div>
-            </div>
-            <div className="eyebrow" style={{ marginTop: 28, marginBottom: 14 }}>Responsibilities</div>
-            <ul className="resp">
-              <li>Built and maintained Excel/Python dashboards for resident-care metrics.</li>
-              <li>Automated weekly reporting pipelines, reducing manual work by 60%.</li>
-              <li>Analysed occupancy and staffing data to support operational decisions.</li>
-              <li>Collaborated with management on data-collection procedures.</li>
-            </ul>
-          </article>
-        </div>
 
         <div className="card card-pad" style={{ marginTop: 16, padding: '28px 32px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', gap: 32, alignItems: 'flex-start', flexWrap: 'wrap' }}>
