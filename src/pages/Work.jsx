@@ -35,7 +35,7 @@ const GRID_PROJECTS = [
   {
     num: '05', category: 'Data',
     title: 'Reporting Pipeline Automation',
-    description: 'Reduced manual reporting work by 60% at Montecassino. Excel/Python dashboards backed by automated data refresh and validation.',
+    description: 'Reduced manual reporting work by 60% through automated pipelines. Excel/Python dashboards backed by automated data refresh and validation.',
     tags: ['Python', 'Pandas', 'Excel'],
     github: null,
     year: '2025',
