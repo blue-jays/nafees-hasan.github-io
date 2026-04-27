@@ -17,9 +17,6 @@ export default function About() {
             <p style={{ fontSize: 16, color: 'var(--ink)', lineHeight: 1.75, marginBottom: 20 }}>
               I&apos;m a Software Engineering student at Seneca Polytechnic in Toronto, focused on building systems that extract insight from data. I enjoy working across the full stack — from designing machine learning pipelines to shipping clean web interfaces.
             </p>
-            <p style={{ fontSize: 15, color: 'var(--ink-dim)', lineHeight: 1.75, marginBottom: 20 }}>
-              Currently working as a Data Analyst at Montecassino Retirement Residence, where I automate reporting pipelines and build dashboards that support care decisions. I&apos;m actively seeking software engineering or data internship opportunities for 2026.
-            </p>
             <p style={{ fontSize: 15, color: 'var(--ink-dim)', lineHeight: 1.75, marginBottom: 36 }}>
               Outside of work and school, I contribute to open-source projects, build browser tools, and explore the intersection of language models and information integrity.
             </p>
