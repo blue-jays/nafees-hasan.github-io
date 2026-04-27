@@ -148,7 +148,7 @@ a { color: inherit; text-decoration: none; }
 
 /* ── Glass card ── */
 .card, .cinema-card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.045));
+  background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.018));
   border: 1px solid var(--line-2);
   border-radius: 16px;
   backdrop-filter: blur(28px) saturate(160%);
