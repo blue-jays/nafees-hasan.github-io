@@ -95,7 +95,7 @@ export default function Home({ navigate }) {
           <div className="card card-pad">
             <div className="mono-num">03</div>
             <h3 className="cap-title">Anomaly Detection</h3>
-            <p className="cap-body">Identifying rare patterns in time-series, transactions, and behaviour data using statistical and deep learning methods.</p>
+            <p className="cap-body">Fraud detection and AML — surfacing suspicious behaviour in transactions and financial data using statistical and deep learning methods.</p>
             <div className="cap-tags">
               <span className="tag">Python</span>
               <span className="tag">Isolation Forest</span>

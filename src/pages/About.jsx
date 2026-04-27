@@ -57,41 +57,35 @@ export default function About() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16, marginTop: 16 }}>
 
           <div className="card card-pad">
-            <div className="eyebrow" style={{ marginBottom: 14 }}>01 — Domain</div>
-            <h3 className="cap-title">Data Systems</h3>
-            <p className="cap-body">
-              Designing pipelines and dashboards that turn raw data into reliable signals — from ingestion to visualisation.
-            </p>
+            <div className="mono-num">01</div>
+            <h3 className="cap-title">MLOps / Machine Learning</h3>
+            <p className="cap-body">End-to-end ML workflows — pipeline design, model training, deployment, and monitoring. Data engineering and backend woven in.</p>
             <div className="cap-tags">
-              <span className="tag">Airflow</span>
-              <span className="tag">dbt</span>
-              <span className="tag">PostgreSQL</span>
-            </div>
-          </div>
-
-          <div className="card card-pad">
-            <div className="eyebrow" style={{ marginBottom: 14 }}>02 — Domain</div>
-            <h3 className="cap-title">Machine Learning</h3>
-            <p className="cap-body">
-              Applying supervised and unsupervised methods to real-world problems: NLP, clustering, MLOps-grade deployment.
-            </p>
-            <div className="cap-tags">
-              <span className="tag">PyTorch</span>
-              <span className="tag">scikit-learn</span>
               <span className="tag">MLflow</span>
+              <span className="tag">PyTorch</span>
+              <span className="tag">Airflow</span>
             </div>
           </div>
 
           <div className="card card-pad">
-            <div className="eyebrow" style={{ marginBottom: 14 }}>03 — Domain</div>
-            <h3 className="cap-title">Software Engineering</h3>
-            <p className="cap-body">
-              Writing backend APIs, full-stack web apps, and tooling that ships — with clean code and pragmatic architecture.
-            </p>
+            <div className="mono-num">02</div>
+            <h3 className="cap-title">Recommendation Systems</h3>
+            <p className="cap-body">Building systems that surface what matters — collaborative filtering, content-based, and hybrid approaches at scale.</p>
+            <div className="cap-tags">
+              <span className="tag">scikit-learn</span>
+              <span className="tag">Embeddings</span>
+              <span className="tag">SQL</span>
+            </div>
+          </div>
+
+          <div className="card card-pad">
+            <div className="mono-num">03</div>
+            <h3 className="cap-title">Anomaly Detection</h3>
+            <p className="cap-body">Fraud detection and AML — surfacing suspicious behaviour in transactions and financial data using statistical and deep learning methods.</p>
             <div className="cap-tags">
               <span className="tag">Python</span>
-              <span className="tag">TypeScript</span>
-              <span className="tag">Docker</span>
+              <span className="tag">Isolation Forest</span>
+              <span className="tag">Statistics</span>
             </div>
           </div>
 
