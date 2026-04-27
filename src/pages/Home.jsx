@@ -23,12 +23,22 @@ export default function Home({ navigate }) {
         {/* ── Left: Cinematic intro ── */}
         <div>
           <p style={{
+            fontSize: '0.8rem',
+            letterSpacing: '0.01em',
+            color: 'var(--text-2)',
+            fontWeight: 500,
+            marginBottom: '0.4rem',
+          }}>
+            Md Nazmun Hasan Nafees
+          </p>
+          <p style={{
             fontSize: '0.68rem',
             letterSpacing: '0.2em',
             color: 'var(--text-2)',
             textTransform: 'uppercase',
-            fontWeight: 500,
+            fontWeight: 400,
             marginBottom: '1.75rem',
+            opacity: 0.6,
           }}>
             Portfolio — 2025
           </p>
