@@ -79,7 +79,7 @@ function initNetWave() {
           const b = pts[rr * COLS + cc]
           const d = Math.hypot(a.x - b.x, a.y - b.y)
           const op = Math.max(0.025, 0.18 - d / (Math.max(W,H) / Math.max(COLS,ROWS) * 4))
-          ctx.strokeStyle = (a.accent || b.accent) ? `oklch(0.85 0.10 105 / ${op * 1.3})` : `rgba(236,232,223,${op})`
+          ctx.strokeStyle = (a.accent || b.accent) ? `oklch(0.78 0.14 145 / ${op * 1.3})` : `rgba(236,232,223,${op})`
           ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke()
         }
       }
@@ -88,12 +88,12 @@ function initNetWave() {
       if (p.accent) {
         const r = 14 * p.pulse
         const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, r)
-        g.addColorStop(0, `oklch(0.85 0.12 105 / ${0.55 * p.pulse})`)
-        g.addColorStop(1, 'oklch(0.85 0.12 105 / 0)')
+        g.addColorStop(0, `oklch(0.78 0.14 145 / ${0.55 * p.pulse})`)
+        g.addColorStop(1, 'oklch(0.78 0.14 145 / 0)')
         ctx.fillStyle = g
         ctx.beginPath(); ctx.arc(p.x, p.y, r, 0, Math.PI * 2); ctx.fill()
       }
-      ctx.fillStyle = p.accent ? `oklch(0.92 0.13 105 / ${0.85 * p.pulse + 0.15})` : 'rgba(236,232,223,0.55)'
+      ctx.fillStyle = p.accent ? `oklch(0.82 0.15 145 / ${0.85 * p.pulse + 0.15})` : 'rgba(236,232,223,0.55)'
       ctx.beginPath(); ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2); ctx.fill()
     }
     if (!reduce) raf = requestAnimationFrame(frame)
@@ -103,27 +103,6 @@ function initNetWave() {
   return () => { cancelAnimationFrame(raf); window.removeEventListener('resize', resize) }
 }
 
-function StaticNet() {
-  const seed = 42
-  const rnd  = (i) => { const x = Math.sin((i + seed) * 9301 + 49297) * 233280; return x - Math.floor(x) }
-  const N = 24, W = 1600, H = 1000
-  const nodes = Array.from({ length: N }, (_, i) => ({ x: rnd(i*2)*W, y: rnd(i*2+1)*H }))
-  const els = []
-  for (let i = 0; i < N; i++) {
-    for (let j = i + 1; j < N; j++) {
-      const d = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y)
-      if (d < 260) els.push(
-        <line key={`l${i}-${j}`} x1={nodes[i].x} y1={nodes[i].y} x2={nodes[j].x} y2={nodes[j].y}
-          stroke={`rgba(236,232,223,${Math.max(0.03, 0.13 - d/2200)})`} strokeWidth="0.6" />
-      )
-    }
-  }
-  nodes.forEach((n, i) => {
-    if (rnd(i*7) > 0.78) els.push(<circle key={`h${i}`} cx={n.x} cy={n.y} r={14} fill="url(#nodeGlow)" />)
-    els.push(<circle key={`d${i}`} cx={n.x} cy={n.y} r={1.4} fill="rgba(236,232,223,0.5)" />)
-  })
-  return <g>{els}</g>
-}
 
 export default function App() {
   const [route, setRoute] = useState(getPath)
@@ -155,7 +134,6 @@ export default function App() {
   useEffect(() => () => clearTimeout(timerRef.current), [])
 
   useEffect(() => {
-    if (route !== '/') return
     const cleanup = initNetWave()
     return cleanup
   }, [route])
@@ -167,21 +145,7 @@ export default function App() {
 
       {/* Fixed cinematic background */}
       <div className="bg" aria-hidden="true">
-        {route === '/' ? (
-          <canvas id="net-wave" />
-        ) : (
-          <div className="bg-net">
-            <svg width="100%" height="100%" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
-              <defs>
-                <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%"   stopColor="oklch(0.85 0.10 105)" stopOpacity="0.5" />
-                  <stop offset="100%" stopColor="oklch(0.85 0.10 105)" stopOpacity="0"   />
-                </radialGradient>
-              </defs>
-              <StaticNet />
-            </svg>
-          </div>
-        )}
+        <canvas id="net-wave" />
         <div className="bg-grain" />
         <div className="bg-vignette" />
       </div>
