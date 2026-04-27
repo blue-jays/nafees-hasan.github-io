@@ -36,7 +36,7 @@ export default function About() {
             <div className="profile-rows">
               <div className="prow"><span>Name</span><span>Md Nazmun Hasan Nafees</span></div>
               <div className="prow"><span>Location</span><span>Toronto, Ontario</span></div>
-              <div className="prow"><span>Program</span><span>Software Engineering Tech</span></div>
+              <div className="prow"><span>Program</span><span>B.Eng in Software Engineering</span></div>
               <div className="prow"><span>School</span><span>Seneca Polytechnic</span></div>
               <div className="prow"><span>Status</span><span style={{ color: 'var(--accent)' }}>Open to 2026 internships</span></div>
             </div>
