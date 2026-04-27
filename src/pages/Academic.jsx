@@ -16,12 +16,12 @@ export default function Academic() {
               Seneca Polytechnic
             </h3>
             <p style={{ fontSize: 14, color: 'var(--ink-dim)', margin: '0 0 22px' }}>
-              Software Engineering Technology — Advanced Diploma
+              Bachelor of Engineering — Software Engineering
             </p>
             <div className="profile-rows">
               <div className="prow"><span>Status</span><span>In Progress</span></div>
               <div className="prow"><span>Location</span><span>Toronto, Ontario</span></div>
-              <div className="prow"><span>Standing</span><span style={{ color: 'var(--accent)' }}>Dean&apos;s List</span></div>
+              <div className="prow"><span>Concentration</span><span>ML · AI · Statistics</span></div>
               <div className="prow"><span>Graduating</span><span>April 2027</span></div>
             </div>
             <div className="eyebrow" style={{ marginTop: 28, marginBottom: 14 }}>Focus areas</div>
@@ -45,6 +45,7 @@ export default function Academic() {
               {['Python','JavaScript','TypeScript','SQL','R','Pandas','NumPy',
                 'scikit-learn','PyTorch','TensorFlow','FastAPI','Flask','Node.js',
                 'PostgreSQL','MongoDB','Docker','Git','GitHub Actions','React','Vite','TailwindCSS',
+                'Data Cleaning','Model Evaluation','Refactoring',
               ].map(s => <span key={s} className="tag">{s}</span>)}
             </div>
           </div>

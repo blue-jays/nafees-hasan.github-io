@@ -47,7 +47,7 @@ export default function Home({ navigate }) {
             <div className="profile-rows">
               <div className="prow"><span>Role</span><span>Software Engineering Student</span></div>
               <div className="prow"><span>Location</span><span>Toronto, Ontario</span></div>
-              <div className="prow"><span>Focus</span><span>Data Engineering · ML · Backend</span></div>
+              <div className="prow"><span>Focus</span><span>MLOps · Rec Systems · Anomaly Detection</span></div>
               <div className="prow"><span>Currently</span><span>Seeking 2026 internships</span></div>
               <div className="prow"><span>Graduating</span><span>April 2027</span></div>
             </div>
@@ -72,34 +72,34 @@ export default function Home({ navigate }) {
 
           <div className="card card-pad">
             <div className="mono-num">01</div>
-            <h3 className="cap-title">Data engineering</h3>
-            <p className="cap-body">Pipelines, warehousing, and orchestration. Turning raw, messy inputs into reliable, queryable systems.</p>
+            <h3 className="cap-title">MLOps / Machine Learning</h3>
+            <p className="cap-body">End-to-end ML workflows — pipeline design, model training, deployment, and monitoring. Data engineering and backend woven in.</p>
             <div className="cap-tags">
+              <span className="tag">MLflow</span>
+              <span className="tag">PyTorch</span>
               <span className="tag">Airflow</span>
-              <span className="tag">DBT</span>
-              <span className="tag">PostgreSQL</span>
             </div>
           </div>
 
           <div className="card card-pad">
             <div className="mono-num">02</div>
-            <h3 className="cap-title">Machine learning</h3>
-            <p className="cap-body">Applied ML and MLOps — model versioning, monitoring, retraining. Practical, observable, deployable.</p>
+            <h3 className="cap-title">Recommendation Systems</h3>
+            <p className="cap-body">Building systems that surface what matters — collaborative filtering, content-based, and hybrid approaches at scale.</p>
             <div className="cap-tags">
-              <span className="tag">PyTorch</span>
               <span className="tag">scikit-learn</span>
-              <span className="tag">MLflow</span>
+              <span className="tag">Embeddings</span>
+              <span className="tag">SQL</span>
             </div>
           </div>
 
           <div className="card card-pad">
             <div className="mono-num">03</div>
-            <h3 className="cap-title">Backend systems</h3>
-            <p className="cap-body">APIs, services, and the infrastructure they run on. Clean code, sensible boundaries, durable architecture.</p>
+            <h3 className="cap-title">Anomaly Detection</h3>
+            <p className="cap-body">Identifying rare patterns in time-series, transactions, and behaviour data using statistical and deep learning methods.</p>
             <div className="cap-tags">
               <span className="tag">Python</span>
-              <span className="tag">TypeScript</span>
-              <span className="tag">Docker</span>
+              <span className="tag">Isolation Forest</span>
+              <span className="tag">Statistics</span>
             </div>
           </div>
 
