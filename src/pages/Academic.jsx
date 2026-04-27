@@ -1,208 +1,95 @@
-const SKILLS = {
-  'Languages': ['Python', 'JavaScript', 'TypeScript', 'SQL', 'R', 'Java', 'C++'],
-  'Data & ML': ['Pandas', 'NumPy', 'Scikit-learn', 'PyTorch', 'TensorFlow', 'Matplotlib', 'Seaborn'],
-  'Backend & APIs': ['FastAPI', 'Flask', 'Node.js', 'Express', 'REST APIs', 'PostgreSQL', 'MongoDB'],
-  'DevOps & Cloud': ['Docker', 'Git', 'GitHub Actions', 'Heroku', 'Linux', 'CI/CD'],
-  'Frontend': ['React', 'Vite', 'TailwindCSS', 'HTML', 'CSS'],
-}
-
-function SectionLabel({ children }) {
-  return (
-    <p style={{
-      fontSize: '0.68rem',
-      letterSpacing: '0.2em',
-      color: 'var(--text-2)',
-      textTransform: 'uppercase',
-      fontWeight: 500,
-      marginBottom: '0.75rem',
-    }}>
-      {children}
-    </p>
-  )
-}
-
-function Card({ children, style = {} }) {
-  return (
-    <div className="cinema-card" style={{ padding: '2rem', ...style }}>
-      {children}
-    </div>
-  )
-}
-
-function MetaRow({ label, value, last = false }) {
-  return (
-    <div style={{
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'flex-start',
-      gap: '1.25rem',
-      padding: '0.65rem 0',
-      borderBottom: last ? 'none' : '1px solid var(--line-0)',
-    }}>
-      <span style={{ fontSize: '0.78rem', color: 'var(--text-2)', fontWeight: 500, flexShrink: 0 }}>
-        {label}
-      </span>
-      <span style={{ fontSize: '0.855rem', color: 'var(--text-1)', textAlign: 'right' }}>
-        {value}
-      </span>
-    </div>
-  )
-}
-
 export default function Academic() {
   return (
-    <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '4rem 1.5rem 7rem' }}>
+    <div className="pf-page">
+      <section className="pf-container" style={{ paddingTop: 130, paddingBottom: 80 }}>
 
-      {/* Page header */}
-      <div style={{ marginBottom: '3rem' }}>
-        <SectionLabel>Background</SectionLabel>
-        <h1 style={{
-          fontSize: 'clamp(2rem, 5vw, 3.25rem)',
-          fontWeight: 800,
-          letterSpacing: '-0.04em',
-          color: 'var(--text-0)',
-        }}>
-          Academic & Experience
-        </h1>
-      </div>
+        <div className="section-head">
+          <div className="eyebrow">Background</div>
+          <h1 className="section-title">
+            Academic <span className="ital" style={{ color: 'var(--ink-dim)' }}>&amp;</span> Experience
+          </h1>
+        </div>
 
-      {/* Top row: Education + Experience */}
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
-        gap: '1.5rem',
-        marginBottom: '1.5rem',
-      }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
 
-        {/* Education */}
-        <Card>
-          <SectionLabel>Education</SectionLabel>
-
-          {/* Institution header */}
-          <div style={{ marginBottom: '1.5rem' }}>
-            <h2 style={{
-              fontSize: '1.2rem',
-              fontWeight: 700,
-              color: 'var(--text-0)',
-              letterSpacing: '-0.02em',
-              marginBottom: '0.25rem',
-            }}>
+          <article className="card card-pad" style={{ padding: 32 }}>
+            <div className="eyebrow" style={{ marginBottom: 18 }}>Education</div>
+            <h3 style={{ fontSize: 22, fontWeight: 600, letterSpacing: '-0.015em', margin: '0 0 6px' }}>
               Seneca Polytechnic
-            </h2>
-            <p style={{ fontSize: '0.875rem', color: 'var(--text-2)' }}>
+            </h3>
+            <p style={{ fontSize: 14, color: 'var(--ink-dim)', margin: '0 0 22px' }}>
               Software Engineering Technology — Advanced Diploma
             </p>
-          </div>
-
-          <MetaRow label="Status"    value="In Progress" />
-          <MetaRow label="Location"  value="Toronto, Ontario" />
-          <MetaRow label="GPA"       value="Dean's List" />
-          <MetaRow label="Grad"      value="April 2027" last />
-
-          {/* Focus areas */}
-          <div style={{ marginTop: '1.5rem' }}>
-            <p style={{ fontSize: '0.72rem', color: 'var(--text-2)', letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 500, marginBottom: '0.75rem' }}>
-              Focus Areas
-            </p>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
-              {['Data Engineering', 'Machine Learning', 'Backend Systems', 'Software Architecture'].map(t => (
-                <span key={t} className="tag">{t}</span>
-              ))}
+            <div className="profile-rows">
+              <div className="prow"><span>Status</span><span>In Progress</span></div>
+              <div className="prow"><span>Location</span><span>Toronto, Ontario</span></div>
+              <div className="prow"><span>Standing</span><span style={{ color: 'var(--accent)' }}>Dean&apos;s List</span></div>
+              <div className="prow"><span>Graduating</span><span>April 2027</span></div>
             </div>
-          </div>
-        </Card>
-
-        {/* Experience */}
-        <Card>
-          <SectionLabel>Experience</SectionLabel>
-
-          <div style={{ marginBottom: '1.5rem' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '0.75rem', marginBottom: '0.25rem' }}>
-              <h2 style={{
-                fontSize: '1.2rem',
-                fontWeight: 700,
-                color: 'var(--text-0)',
-                letterSpacing: '-0.02em',
-              }}>
-                Montecassino Retirement Residence
-              </h2>
+            <div className="eyebrow" style={{ marginTop: 28, marginBottom: 14 }}>Focus areas</div>
+            <div className="cap-tags">
+              <span className="tag">Data Engineering</span>
+              <span className="tag">Machine Learning</span>
+              <span className="tag">Backend Systems</span>
+              <span className="tag">Software Architecture</span>
             </div>
-            <p style={{ fontSize: '0.875rem', color: 'var(--text-2)' }}>
-              Data Analyst
-            </p>
-          </div>
+          </article>
 
-          <MetaRow label="Period"    value="Apr 2023 – Present" />
-          <MetaRow label="Type"      value="Part-time / Co-op" />
-          <MetaRow label="Location"  value="Toronto, Ontario" last />
-
-          {/* Responsibilities */}
-          <div style={{ marginTop: '1.5rem' }}>
-            <p style={{ fontSize: '0.72rem', color: 'var(--text-2)', letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 500, marginBottom: '0.875rem' }}>
-              Responsibilities
-            </p>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              {[
-                'Built and maintained Excel/Python dashboards for resident care metrics',
-                'Automated weekly reporting pipelines, reducing manual work by 60%',
-                'Analysed occupancy and staffing data to support operational decisions',
-                'Collaborated with management to design data collection procedures',
-              ].map((item, i) => (
-                <li key={i} style={{ display: 'flex', gap: '0.625rem', alignItems: 'flex-start' }}>
-                  <span style={{
-                    width: 5, height: 5,
-                    borderRadius: '50%',
-                    backgroundColor: 'var(--accent-red)',
-                    flexShrink: 0,
-                    marginTop: '0.45rem',
-                  }} />
-                  <span style={{ fontSize: '0.845rem', color: 'var(--text-2)', lineHeight: 1.65 }}>
-                    {item}
-                  </span>
-                </li>
-              ))}
+          <article className="card card-pad" style={{ padding: 32 }}>
+            <div className="eyebrow" style={{ marginBottom: 18 }}>Experience</div>
+            <h3 style={{ fontSize: 22, fontWeight: 600, letterSpacing: '-0.015em', margin: '0 0 6px' }}>
+              Montecassino Retirement Residence
+            </h3>
+            <p style={{ fontSize: 14, color: 'var(--ink-dim)', margin: '0 0 22px' }}>Data Analyst</p>
+            <div className="profile-rows">
+              <div className="prow"><span>Period</span><span>Apr 2023 — Present</span></div>
+              <div className="prow"><span>Type</span><span>Part-time / Co-op</span></div>
+              <div className="prow"><span>Location</span><span>Toronto, Ontario</span></div>
+            </div>
+            <div className="eyebrow" style={{ marginTop: 28, marginBottom: 14 }}>Responsibilities</div>
+            <ul className="resp">
+              <li>Built and maintained Excel/Python dashboards for resident-care metrics.</li>
+              <li>Automated weekly reporting pipelines, reducing manual work by 60%.</li>
+              <li>Analysed occupancy and staffing data to support operational decisions.</li>
+              <li>Collaborated with management on data-collection procedures.</li>
             </ul>
-          </div>
-        </Card>
-
-      </div>
-
-      {/* Skills */}
-      <Card>
-        <SectionLabel>Skills</SectionLabel>
-        <h2 style={{
-          fontSize: '1.15rem',
-          fontWeight: 700,
-          color: 'var(--text-0)',
-          letterSpacing: '-0.02em',
-          marginBottom: '1.75rem',
-        }}>
-          Technical Stack
-        </h2>
-
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-          {Object.entries(SKILLS).map(([category, items]) => (
-            <div key={category}>
-              <p style={{
-                fontSize: '0.72rem',
-                color: 'var(--text-2)',
-                letterSpacing: '0.12em',
-                textTransform: 'uppercase',
-                fontWeight: 500,
-                marginBottom: '0.6rem',
-              }}>
-                {category}
-              </p>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
-                {items.map(skill => (
-                  <span key={skill} className="tag">{skill}</span>
-                ))}
-              </div>
-            </div>
-          ))}
+          </article>
         </div>
-      </Card>
 
+        <div className="card card-pad" style={{ marginTop: 16, padding: '28px 32px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', gap: 32, alignItems: 'flex-start', flexWrap: 'wrap' }}>
+            <div style={{ maxWidth: 320 }}>
+              <div className="eyebrow" style={{ marginBottom: 10 }}>Technical skills</div>
+              <p style={{ fontSize: 13.5, color: 'var(--ink-dim)', lineHeight: 1.6, margin: 0 }}>
+                Languages, frameworks, and tools across the data and software engineering stack.
+              </p>
+            </div>
+            <div className="cap-tags" style={{ flex: 1, maxWidth: 700, justifyContent: 'flex-end' }}>
+              {['Python','JavaScript','TypeScript','SQL','R','Pandas','NumPy',
+                'scikit-learn','PyTorch','TensorFlow','FastAPI','Flask','Node.js',
+                'PostgreSQL','MongoDB','Docker','Git','GitHub Actions','React','Vite','TailwindCSS',
+              ].map(s => <span key={s} className="tag">{s}</span>)}
+            </div>
+          </div>
+        </div>
+
+        <div className="card card-pad" style={{ marginTop: 16, padding: '28px 32px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', gap: 32, alignItems: 'flex-start', flexWrap: 'wrap' }}>
+            <div style={{ maxWidth: 320 }}>
+              <div className="eyebrow" style={{ marginBottom: 10 }}>Selected coursework</div>
+              <p style={{ fontSize: 13.5, color: 'var(--ink-dim)', lineHeight: 1.6, margin: 0 }}>
+                A representative slice of the technical curriculum completed or currently in progress.
+              </p>
+            </div>
+            <div className="cap-tags" style={{ flex: 1, maxWidth: 700, justifyContent: 'flex-end' }}>
+              {['Data Structures','Algorithms','Operating Systems','Databases',
+                'Distributed Systems','Linear Algebra','Statistics','Software Design','Networking',
+              ].map(c => <span key={c} className="tag">{c}</span>)}
+            </div>
+          </div>
+        </div>
+
+      </section>
     </div>
   )
 }

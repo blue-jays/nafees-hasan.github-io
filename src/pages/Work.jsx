@@ -1,230 +1,114 @@
-const PROJECTS = [
+const FEATURED = {
+  title: 'End-to-End ML Pipeline',
+  subtitle: 'MLOPS · CI/CD · DOCKER · KUBERNETES',
+  description: 'Complete MLOps pipeline with CI/CD, model versioning, monitoring, and automated retraining. Covers the full lifecycle from data ingestion through deployment and observability.',
+  tags: ['MLOps', 'CI/CD', 'Docker', 'Kubernetes'],
+  github: 'https://github.com/blue-jays/MLOps_full_pipeline',
+  status: 'Open Source',
+}
+
+const GRID_PROJECTS = [
   {
-    id: 5,
-    title: 'End-to-End ML Pipeline',
-    subtitle: 'MLOps · CI/CD · Docker · Kubernetes',
-    description:
-      'Complete MLOps pipeline with CI/CD, model versioning, monitoring, and automated retraining. Covers the full lifecycle from data ingestion through deployment and observability.',
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80',
-    tags: ['MLOps', 'CI/CD', 'Docker', 'Kubernetes'],
-    github: 'https://github.com/blue-jays/MLOps_full_pipeline',
-    demo: null,
-    status: 'Open Source',
-  },
-  {
-    id: 2,
-    title: 'Credit Card Fraud Pattern Analysis',
-    subtitle: 'Python · Machine Learning · Fraud Detection',
-    description:
-      'Helps banks spot suspicious card transactions early by finding patterns in when, where, and how fraud tends to happen.',
-    image: 'https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80',
-    tags: ['Python', 'Machine Learning', 'Fraud Detection'],
-    github: 'https://github.com/blue-jays/Credit_Card_Fraud_Detection_System',
-    demo: null,
-    status: 'Open Source',
-  },
-  {
-    id: 1,
+    num: '02', category: 'ML',
     title: 'News Sentiment Bias Analyzer',
-    subtitle: 'NLP · FastAPI · Chrome Extension · MLOps',
-    description:
-      'Full-stack system analyzing news bias across outlets using a Chrome Extension, FastAPI backend, and ML pipeline built with MLOps principles.',
-    image: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=2070&auto=format&fit=crop',
+    description: 'Chrome Extension + FastAPI backend analysing news bias across outlets using SBERT embeddings, clustering, and an MLOps-grade pipeline.',
     tags: ['MLOps', 'FastAPI', 'NLP', 'Chrome Extension'],
     github: 'https://github.com/blue-jays/News_Bias_Check_Companion',
-    demo: null,
-    status: 'Open Source',
+    year: '2025',
   },
   {
-    id: 4,
+    num: '03', category: 'Data',
+    title: 'Credit Card Fraud Pattern Analysis',
+    description: 'Identifies fraud patterns — when, where, and how — to help banks flag suspicious transactions early using ML classification.',
+    tags: ['Python', 'scikit-learn', 'Fraud Detection'],
+    github: 'https://github.com/blue-jays/Credit_Card_Fraud_Detection_System',
+    year: '2025',
+  },
+  {
+    num: '04', category: 'Research',
     title: 'Loan Default Risk Analysis',
-    subtitle: 'Python · Statistics · Risk Modelling',
-    description:
-      'Statistical analysis of 10,000 loans to quantify default risk, evaluate a new credit policy, and build a logistic regression risk model.',
-    image: 'https://images.unsplash.com/photo-1454166155302-ef4863c27e70?q=80&w=2070&auto=format&fit=crop',
-    tags: ['Python', 'Statistics', 'Risk Modeling', 'Logistic Regression'],
+    description: 'Statistical analysis of 10,000 loans — quantifying default risk, evaluating a new credit policy, and building a logistic regression risk model.',
+    tags: ['Python', 'Statistics', 'Logistic Regression'],
     github: 'https://github.com/blue-jays/Loan-Default-Risk-Analysis',
-    demo: null,
-    status: 'Open Source',
+    year: '2024',
+  },
+  {
+    num: '05', category: 'Data',
+    title: 'Reporting Pipeline Automation',
+    description: 'Reduced manual reporting work by 60% at Montecassino. Excel/Python dashboards backed by automated data refresh and validation.',
+    tags: ['Python', 'Pandas', 'Excel'],
+    github: null,
+    year: '2025',
   },
 ]
 
-function ProjectCard({ project, lead = false }) {
-  const { title, subtitle, description, image, tags, github, demo, status } = project
-
+export default function Work() {
   return (
-    <div
-      className="cinema-card"
-      style={{
-        overflow: 'hidden',
-        display: 'flex',
-        flexDirection: 'column',
-        height: '100%',
-      }}
-    >
-      {/* Image banner */}
-      <div style={{
-        position: 'relative',
-        height: lead ? '220px' : '160px',
-        overflow: 'hidden',
-        borderBottom: '1px solid var(--line-0)',
-      }}>
-        <img
-          src={image}
-          alt={title}
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            display: 'block',
-          }}
-        />
-        {/* Dark cinematic overlay */}
-        <div style={{
-          position: 'absolute',
-          inset: 0,
-          background: 'linear-gradient(to bottom, rgba(18,16,16,0.35) 0%, rgba(18,16,16,0.72) 100%)',
-        }} />
+    <div className="pf-page">
+      <section className="pf-container" style={{ paddingTop: 130, paddingBottom: 80 }}>
 
-        {/* Status badge */}
-        <span style={{
-          position: 'absolute',
-          top: '0.875rem',
-          right: '0.875rem',
-          padding: '0.22rem 0.6rem',
-          backgroundColor: 'rgba(18,16,16,0.72)',
-          border: '1px solid var(--line-1)',
-          borderRadius: '9999px',
-          fontSize: '0.68rem',
-          color: 'var(--text-2)',
-          fontWeight: 500,
-          letterSpacing: '0.06em',
-          backdropFilter: 'blur(6px)',
-        }}>
-          {status}
-        </span>
-
-        {/* Subtitle overlay at bottom */}
-        <div style={{
-          position: 'absolute',
-          bottom: '0.875rem',
-          left: '1.25rem',
-        }}>
-          <p style={{
-            fontSize: '0.65rem',
-            letterSpacing: '0.12em',
-            color: 'var(--text-2)',
-            textTransform: 'uppercase',
-            fontWeight: 500,
-          }}>
-            {subtitle}
+        {/* Header */}
+        <div className="section-head">
+          <div className="eyebrow">Selected Work</div>
+          <h1 className="section-title">
+            Projects, <span className="ital" style={{ color: 'var(--ink-dim)' }}>shipped &amp; in motion</span>.
+          </h1>
+          <p style={{ fontSize: 15, color: 'var(--ink-dim)', lineHeight: 1.65, maxWidth: '60ch', marginTop: 14 }}>
+            A selection of data engineering, machine learning, and software projects — from research prototypes to deployed products.
           </p>
         </div>
-      </div>
 
-      {/* Card body */}
-      <div style={{ padding: '1.4rem 1.5rem 1.5rem', display: 'flex', flexDirection: 'column', flex: 1 }}>
-        <h2 style={{
-          fontSize: lead ? '1.35rem' : '1.05rem',
-          fontWeight: 700,
-          color: 'var(--text-0)',
-          letterSpacing: '-0.02em',
-          marginBottom: '0.5rem',
-        }}>
-          {title}
-        </h2>
+        {/* Featured card */}
+        <article className="card" style={{ overflow: 'hidden' }}>
+          <div className="proj-cover">
+            <div className="proj-cover-overlay" />
+            <span className="chip" style={{ position: 'absolute', top: 18, right: 18 }}>
+              {FEATURED.status}
+            </span>
+            <div className="eyebrow" style={{ position: 'absolute', left: 24, bottom: 18 }}>
+              {FEATURED.subtitle}
+            </div>
+          </div>
+          <div style={{ padding: '28px 28px 30px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 32, flexWrap: 'wrap' }}>
+              <div style={{ maxWidth: 640 }}>
+                <h2 className="proj-title">{FEATURED.title}</h2>
+                <p className="proj-body">{FEATURED.description}</p>
+                <div className="cap-tags" style={{ marginTop: 16 }}>
+                  {FEATURED.tags.map(t => <span key={t} className="tag">{t}</span>)}
+                </div>
+              </div>
+              <a className="btn-ghost" href={FEATURED.github} target="_blank" rel="noopener noreferrer">
+                GitHub →
+              </a>
+            </div>
+          </div>
+        </article>
 
-        <p style={{
-          fontSize: '0.875rem',
-          color: 'var(--text-2)',
-          lineHeight: 1.7,
-          marginBottom: '1.1rem',
-          flex: 1,
-        }}>
-          {description}
-        </p>
-
-        {/* Tags */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem', marginBottom: '1.1rem' }}>
-          {tags.map(t => <span key={t} className="tag">{t}</span>)}
+        {/* 2×2 grid */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginTop: 16 }}>
+          {GRID_PROJECTS.map(p => (
+            <article key={p.num} className="card card-pad proj-mini">
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
+                <span className="eyebrow">{p.num} · {p.category}</span>
+                <span className="tag">{p.year}</span>
+              </div>
+              <h3 className="proj-title-sm">{p.title}</h3>
+              <p className="proj-body">{p.description}</p>
+              <div className="cap-tags" style={{ marginTop: 14, marginBottom: p.github ? 16 : 0 }}>
+                {p.tags.map(t => <span key={t} className="tag">{t}</span>)}
+              </div>
+              {p.github && (
+                <a className="btn-ghost" href={p.github} target="_blank" rel="noopener noreferrer"
+                  style={{ fontSize: 12.5, padding: '8px 14px', marginTop: 4 }}>
+                  GitHub →
+                </a>
+              )}
+            </article>
+          ))}
         </div>
 
-        {/* Links */}
-        <div style={{ display: 'flex', gap: '0.625rem', flexWrap: 'wrap' }}>
-          {github && (
-            <a
-              href={github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-ghost"
-              style={{ fontSize: '0.8rem', padding: '0.42rem 1rem' }}
-            >
-              GitHub →
-            </a>
-          )}
-          {demo && (
-            <a
-              href={demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary"
-              style={{ fontSize: '0.8rem', padding: '0.42rem 1rem' }}
-            >
-              Live Demo →
-            </a>
-          )}
-        </div>
-      </div>
-    </div>
-  )
-}
-
-export default function Work() {
-  const [lead, ...rest] = PROJECTS
-
-  return (
-    <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '4rem 1.5rem 7rem' }}>
-
-      {/* Header */}
-      <div style={{ marginBottom: '3rem' }}>
-        <p style={{
-          fontSize: '0.68rem',
-          letterSpacing: '0.2em',
-          color: 'var(--text-2)',
-          textTransform: 'uppercase',
-          fontWeight: 500,
-          marginBottom: '0.75rem',
-        }}>
-          Selected work
-        </p>
-        <h1 style={{
-          fontSize: 'clamp(2rem, 5vw, 3.25rem)',
-          fontWeight: 800,
-          letterSpacing: '-0.04em',
-          color: 'var(--text-0)',
-          marginBottom: '0.875rem',
-        }}>
-          Projects
-        </h1>
-        <p style={{ fontSize: '0.95rem', color: 'var(--text-2)', maxWidth: '520px', lineHeight: 1.7 }}>
-          A selection of data engineering, machine learning, and software projects — from research prototypes to deployed products.
-        </p>
-      </div>
-
-      {/* Lead project */}
-      <div style={{ marginBottom: '1.5rem' }}>
-        <ProjectCard project={lead} lead />
-      </div>
-
-      {/* Paired rows */}
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
-        gap: '1.5rem',
-      }}>
-        {rest.map(p => <ProjectCard key={p.id} project={p} />)}
-      </div>
-
+      </section>
     </div>
   )
 }

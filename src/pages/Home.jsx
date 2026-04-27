@@ -1,218 +1,110 @@
-const PROFILE_ROWS = [
-  { label: 'Role',        value: 'Software Engineering Student' },
-  { label: 'Location',    value: 'Toronto, Ontario' },
-  { label: 'Focus',       value: 'Data Engineering · ML · Backend' },
-  { label: 'Currently',   value: 'Seeking 2025/26 internships' },
-  { label: 'Graduating',  value: 'April 2027' },
-]
-
-const METADATA = ['Toronto', 'Seneca Polytechnic', 'Open to internships']
-
 export default function Home({ navigate }) {
   return (
-    <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '5rem 1.5rem 7rem' }}>
+    <div className="pf-page">
+      <section className="pf-container" style={{ paddingTop: 130, paddingBottom: 80 }}>
 
-      {/* Two-column grid */}
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 420px), 1fr))',
-        gap: '4rem',
-        alignItems: 'start',
-      }}>
+        {/* ── Hero: two-column ── */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1.15fr 0.85fr', gap: 80, alignItems: 'center', minHeight: 560 }}>
 
-        {/* ── Left: Cinematic intro ── */}
-        <div>
-          <p style={{
-            fontSize: '0.8rem',
-            letterSpacing: '0.01em',
-            color: 'var(--text-2)',
-            fontWeight: 500,
-            marginBottom: '0.4rem',
-          }}>
-            Md Nazmun Hasan Nafees
-          </p>
-          <p style={{
-            fontSize: '0.68rem',
-            letterSpacing: '0.2em',
-            color: 'var(--text-2)',
-            textTransform: 'uppercase',
-            fontWeight: 400,
-            marginBottom: '1.75rem',
-            opacity: 0.6,
-          }}>
-            Portfolio — 2025
-          </p>
+          {/* Left */}
+          <div>
+            <div className="eyebrow">Portfolio — 2026</div>
 
-          <div style={{ marginBottom: '1.75rem', lineHeight: 0.95 }}>
-            <h1 style={{
-              fontSize: 'clamp(3.8rem, 10vw, 7.5rem)',
-              fontWeight: 800,
-              letterSpacing: '-0.045em',
-              color: 'var(--text-0)',
-              display: 'block',
-            }}>
-              Nafees
+            <h1 className="display" style={{ marginTop: 22 }}>
+              Md Nazmun<br />
+              Hasan <span className="ital">Nafees</span>
             </h1>
-            <h1 style={{
-              fontSize: 'clamp(3.8rem, 10vw, 7.5rem)',
-              fontWeight: 800,
-              letterSpacing: '-0.045em',
-              color: 'var(--text-2)',
-              display: 'block',
-            }}>
-              / Hasan
-            </h1>
-          </div>
 
-          <p style={{
-            fontSize: '1.05rem',
-            color: 'var(--text-1)',
-            maxWidth: '460px',
-            lineHeight: 1.75,
-            marginBottom: '2.25rem',
-          }}>
-            Building intelligent systems that make data meaningful — from pipeline to product.
-          </p>
+            <p className="lead">
+              Software engineering student building intelligent systems that turn data into clarity — from pipeline to product.
+            </p>
 
-          {/* Metadata strip */}
-          <div style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            gap: '0.5rem 1.5rem',
-            marginBottom: '2.75rem',
-          }}>
-            {METADATA.map(item => (
-              <span key={item} style={{
-                fontSize: '0.82rem',
-                color: 'var(--text-2)',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.45rem',
-              }}>
-                <span style={{
-                  width: 5,
-                  height: 5,
-                  borderRadius: '50%',
-                  backgroundColor: 'var(--accent-red)',
-                  display: 'inline-block',
-                  flexShrink: 0,
-                }} />
-                {item}
+            <div style={{ display: 'flex', gap: 12, marginTop: 36, flexWrap: 'wrap' }}>
+              <button className="btn-primary" onClick={() => navigate('/work')}>
+                View selected work →
+              </button>
+              <a className="btn-ghost" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                Résumé ↗
+              </a>
+            </div>
+
+            <div style={{ display: 'flex', gap: 24, marginTop: 44, flexWrap: 'wrap', alignItems: 'center' }}>
+              <span className="chip"><span className="pulse" />Open to 2026 internships</span>
+              <span style={{ fontSize: 13, color: 'var(--ink-mute)', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+                <span style={{ width: 4, height: 4, borderRadius: '50%', background: 'var(--ink-mute)' }} />
+                Toronto, ON
               </span>
-            ))}
-          </div>
-
-          {/* CTAs */}
-          <div style={{ display: 'flex', gap: '0.875rem', flexWrap: 'wrap' }}>
-            <button
-              onClick={() => navigate('/work')}
-              className="btn-primary"
-            >
-              View my work
-            </button>
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-ghost"
-            >
-              Resume →
-            </a>
-          </div>
-        </div>
-
-        {/* ── Right: Profile card ── */}
-        <div className="cinema-card" style={{ padding: '2rem' }}>
-          <p style={{
-            fontSize: '0.68rem',
-            letterSpacing: '0.18em',
-            color: 'var(--text-2)',
-            textTransform: 'uppercase',
-            fontWeight: 500,
-            marginBottom: '1.5rem',
-          }}>
-            Profile
-          </p>
-
-          {PROFILE_ROWS.map(({ label, value }, i) => (
-            <div
-              key={label}
-              style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'flex-start',
-                gap: '1.25rem',
-                padding: '0.7rem 0',
-                borderBottom: i < PROFILE_ROWS.length - 1
-                  ? '1px solid var(--line-0)'
-                  : 'none',
-              }}
-            >
-              <span style={{
-                fontSize: '0.78rem',
-                color: 'var(--text-2)',
-                fontWeight: 500,
-                whiteSpace: 'nowrap',
-                flexShrink: 0,
-              }}>
-                {label}
-              </span>
-              <span style={{
-                fontSize: '0.855rem',
-                color: 'var(--text-1)',
-                textAlign: 'right',
-              }}>
-                {value}
+              <span style={{ fontSize: 13, color: 'var(--ink-mute)', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+                <span style={{ width: 4, height: 4, borderRadius: '50%', background: 'var(--ink-mute)' }} />
+                Seneca Polytechnic
               </span>
             </div>
-          ))}
+          </div>
 
-          {/* Social links */}
-          <div style={{
-            display: 'flex',
-            gap: '0.625rem',
-            marginTop: '1.75rem',
-          }}>
-            {[
-              { label: 'GitHub', href: 'https://github.com/blue-jays' },
-              { label: 'LinkedIn', href: 'https://www.linkedin.com/in/md-nazmun-hasan-nafees/' },
-            ].map(({ label, href }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  flex: 1,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  padding: '0.6rem 0.875rem',
-                  backgroundColor: 'var(--bg-2)',
-                  border: '1px solid var(--line-1)',
-                  borderRadius: '0.75rem',
-                  color: 'var(--text-1)',
-                  textDecoration: 'none',
-                  fontSize: '0.82rem',
-                  fontWeight: 500,
-                  transition: 'border-color 0.15s, color 0.15s',
-                }}
-                onMouseEnter={e => {
-                  e.currentTarget.style.borderColor = 'var(--text-2)'
-                  e.currentTarget.style.color = 'var(--text-0)'
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.borderColor = 'var(--line-1)'
-                  e.currentTarget.style.color = 'var(--text-1)'
-                }}
-              >
-                {label}
+          {/* Right — profile card */}
+          <div className="card card-pad" style={{ padding: 32 }}>
+            <div className="eyebrow" style={{ marginBottom: 22 }}>Profile</div>
+            <div className="profile-rows">
+              <div className="prow"><span>Role</span><span>Software Engineering Student</span></div>
+              <div className="prow"><span>Location</span><span>Toronto, Ontario</span></div>
+              <div className="prow"><span>Focus</span><span>Data Engineering · ML · Backend</span></div>
+              <div className="prow"><span>Currently</span><span>Seeking 2026 internships</span></div>
+              <div className="prow"><span>Graduating</span><span>April 2027</span></div>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginTop: 24 }}>
+              <a className="btn-ghost" style={{ justifyContent: 'center' }}
+                href="https://github.com/blue-jays" target="_blank" rel="noopener noreferrer">
+                GitHub
               </a>
-            ))}
+              <a className="btn-ghost" style={{ justifyContent: 'center' }}
+                href="https://www.linkedin.com/in/md-nazmun-hasan-nafees/" target="_blank" rel="noopener noreferrer">
+                LinkedIn
+              </a>
+            </div>
           </div>
         </div>
+      </section>
 
-      </div>
+      {/* ── What I work on ── */}
+      <section className="pf-container" style={{ paddingTop: 40, paddingBottom: 80 }}>
+        <div className="eyebrow" style={{ marginBottom: 22 }}>What I work on</div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16 }}>
+
+          <div className="card card-pad">
+            <div className="mono-num">01</div>
+            <h3 className="cap-title">Data engineering</h3>
+            <p className="cap-body">Pipelines, warehousing, and orchestration. Turning raw, messy inputs into reliable, queryable systems.</p>
+            <div className="cap-tags">
+              <span className="tag">Airflow</span>
+              <span className="tag">DBT</span>
+              <span className="tag">PostgreSQL</span>
+            </div>
+          </div>
+
+          <div className="card card-pad">
+            <div className="mono-num">02</div>
+            <h3 className="cap-title">Machine learning</h3>
+            <p className="cap-body">Applied ML and MLOps — model versioning, monitoring, retraining. Practical, observable, deployable.</p>
+            <div className="cap-tags">
+              <span className="tag">PyTorch</span>
+              <span className="tag">scikit-learn</span>
+              <span className="tag">MLflow</span>
+            </div>
+          </div>
+
+          <div className="card card-pad">
+            <div className="mono-num">03</div>
+            <h3 className="cap-title">Backend systems</h3>
+            <p className="cap-body">APIs, services, and the infrastructure they run on. Clean code, sensible boundaries, durable architecture.</p>
+            <div className="cap-tags">
+              <span className="tag">Python</span>
+              <span className="tag">TypeScript</span>
+              <span className="tag">Docker</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
     </div>
   )
 }
