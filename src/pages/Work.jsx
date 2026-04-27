@@ -1,47 +1,68 @@
 const PROJECTS = [
   {
-    id: 'news-bias',
-    title: 'News Bias Analyzer',
-    subtitle: 'NLP · Chrome Extension · Python',
+    id: 5,
+    title: 'End-to-End ML Pipeline',
+    subtitle: 'MLOps · CI/CD · Docker · Kubernetes',
     description:
-      'A Chrome extension + Python backend that scores the political bias and sentiment of any news article in real time. Uses fine-tuned transformer models to surface left/centre/right lean with confidence scores, helping readers identify media framing.',
-    tags: ['Python', 'NLP', 'Transformers', 'Chrome Extension', 'FastAPI'],
-    gradient: 'linear-gradient(135deg, #1e1010 0%, #2a1010 40%, #1a1018 100%)',
-    accentColor: '#7a2c2a',
+      'Complete MLOps pipeline with CI/CD, model versioning, monitoring, and automated retraining. Covers the full lifecycle from data ingestion through deployment and observability.',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80',
+    tags: ['MLOps', 'CI/CD', 'Docker', 'Kubernetes'],
+    github: 'https://github.com/blue-jays/MLOps_full_pipeline',
+    demo: null,
+    status: 'Open Source',
+  },
+  {
+    id: 2,
+    title: 'Credit Card Fraud Pattern Analysis',
+    subtitle: 'Python · Machine Learning · Fraud Detection',
+    description:
+      'Helps banks spot suspicious card transactions early by finding patterns in when, where, and how fraud tends to happen.',
+    image: 'https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80',
+    tags: ['Python', 'Machine Learning', 'Fraud Detection'],
+    github: 'https://github.com/blue-jays/Credit_Card_Fraud_Detection_System',
+    demo: null,
+    status: 'Open Source',
+  },
+  {
+    id: 1,
+    title: 'News Sentiment Bias Analyzer',
+    subtitle: 'NLP · FastAPI · Chrome Extension · MLOps',
+    description:
+      'Full-stack system analyzing news bias across outlets using a Chrome Extension, FastAPI backend, and ML pipeline built with MLOps principles.',
+    image: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=2070&auto=format&fit=crop',
+    tags: ['MLOps', 'FastAPI', 'NLP', 'Chrome Extension'],
     github: 'https://github.com/blue-jays/News_Bias_Check_Companion',
     demo: null,
     status: 'Open Source',
   },
   {
-    id: 'game-rec',
-    title: 'Game Recommender System',
-    subtitle: 'ML · Collaborative Filtering · Heroku',
+    id: 3,
+    title: 'Cloud-Native Task Manager',
+    subtitle: 'React · Node.js · MongoDB · AWS',
     description:
-      'Content + collaborative-filtering recommender that suggests video games based on user preferences and play history. Deployed as a full-stack web app on Heroku with a clean search interface.',
-    tags: ['Python', 'Scikit-learn', 'Pandas', 'Flask', 'Heroku'],
-    gradient: 'linear-gradient(135deg, #101a18 0%, #0e1f1a 50%, #121018 100%)',
-    accentColor: '#1f4f40',
-    github: null,
-    demo: 'https://game-engine-753abe0961a7.herokuapp.com',
+      'Full-stack web application with React, Node.js, and MongoDB deployed on AWS.',
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop',
+    tags: ['React', 'Node.js', 'MongoDB', 'AWS'],
+    github: 'https://github.com/blue-jays/task-manager',
+    demo: 'https://task-manager.nafees-hasan.com',
     status: 'Live Demo',
   },
   {
-    id: 'customer-seg',
-    title: 'Customer Segmentation — Banking',
-    subtitle: 'Unsupervised ML · EDA · Business Intelligence',
+    id: 4,
+    title: 'Loan Default Risk Analysis',
+    subtitle: 'Python · Statistics · Risk Modelling',
     description:
-      'K-Means and hierarchical clustering pipeline applied to a retail-banking dataset to discover actionable customer segments. Includes full EDA, dimensionality reduction with PCA, and a Matplotlib dashboard of segment profiles.',
-    tags: ['Python', 'K-Means', 'PCA', 'Matplotlib', 'Pandas'],
-    gradient: 'linear-gradient(135deg, #1a1508 0%, #221c0a 50%, #181210 100%)',
-    accentColor: '#4a3a10',
-    github: null,
+      'Statistical analysis of 10,000 loans to quantify default risk, evaluate a new credit policy, and build a logistic regression risk model.',
+    image: 'https://images.unsplash.com/photo-1454166155302-ef4863c27e70?q=80&w=2070&auto=format&fit=crop',
+    tags: ['Python', 'Statistics', 'Risk Modeling', 'Logistic Regression'],
+    github: 'https://github.com/blue-jays/Loan-Default-Risk-Analysis',
     demo: null,
-    status: 'Case Study',
+    status: 'Open Source',
   },
 ]
 
 function ProjectCard({ project, lead = false }) {
-  const { title, subtitle, description, tags, gradient, accentColor, github, demo, status } = project
+  const { title, subtitle, description, image, tags, github, demo, status } = project
 
   return (
     <div
@@ -53,46 +74,57 @@ function ProjectCard({ project, lead = false }) {
         height: '100%',
       }}
     >
-      {/* Gradient banner */}
+      {/* Image banner */}
       <div style={{
-        background: gradient,
-        height: lead ? '200px' : '140px',
         position: 'relative',
-        display: 'flex',
-        alignItems: 'flex-end',
-        padding: '1.25rem 1.5rem',
+        height: lead ? '220px' : '160px',
+        overflow: 'hidden',
         borderBottom: '1px solid var(--line-0)',
       }}>
+        <img
+          src={image}
+          alt={title}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            display: 'block',
+          }}
+        />
+        {/* Dark cinematic overlay */}
+        <div style={{
+          position: 'absolute',
+          inset: 0,
+          background: 'linear-gradient(to bottom, rgba(18,16,16,0.35) 0%, rgba(18,16,16,0.72) 100%)',
+        }} />
+
         {/* Status badge */}
         <span style={{
           position: 'absolute',
-          top: '1rem',
-          right: '1rem',
-          padding: '0.25rem 0.6rem',
-          backgroundColor: 'rgba(0,0,0,0.55)',
-          border: `1px solid ${accentColor}`,
+          top: '0.875rem',
+          right: '0.875rem',
+          padding: '0.22rem 0.6rem',
+          backgroundColor: 'rgba(18,16,16,0.72)',
+          border: '1px solid var(--line-1)',
           borderRadius: '9999px',
           fontSize: '0.68rem',
           color: 'var(--text-2)',
           fontWeight: 500,
-          letterSpacing: '0.05em',
+          letterSpacing: '0.06em',
+          backdropFilter: 'blur(6px)',
         }}>
           {status}
         </span>
 
-        {/* Decorative grid dots */}
+        {/* Subtitle overlay at bottom */}
         <div style={{
           position: 'absolute',
-          inset: 0,
-          backgroundImage: `radial-gradient(circle, ${accentColor}30 1px, transparent 1px)`,
-          backgroundSize: '28px 28px',
-          opacity: 0.5,
-        }} />
-
-        <div style={{ position: 'relative', zIndex: 1 }}>
+          bottom: '0.875rem',
+          left: '1.25rem',
+        }}>
           <p style={{
-            fontSize: '0.68rem',
-            letterSpacing: '0.14em',
+            fontSize: '0.65rem',
+            letterSpacing: '0.12em',
             color: 'var(--text-2)',
             textTransform: 'uppercase',
             fontWeight: 500,
@@ -103,13 +135,13 @@ function ProjectCard({ project, lead = false }) {
       </div>
 
       {/* Card body */}
-      <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flex: 1 }}>
+      <div style={{ padding: '1.4rem 1.5rem 1.5rem', display: 'flex', flexDirection: 'column', flex: 1 }}>
         <h2 style={{
-          fontSize: lead ? '1.4rem' : '1.1rem',
+          fontSize: lead ? '1.35rem' : '1.05rem',
           fontWeight: 700,
           color: 'var(--text-0)',
           letterSpacing: '-0.02em',
-          marginBottom: '0.625rem',
+          marginBottom: '0.5rem',
         }}>
           {title}
         </h2>
@@ -118,14 +150,14 @@ function ProjectCard({ project, lead = false }) {
           fontSize: '0.875rem',
           color: 'var(--text-2)',
           lineHeight: 1.7,
-          marginBottom: '1.25rem',
+          marginBottom: '1.1rem',
           flex: 1,
         }}>
           {description}
         </p>
 
         {/* Tags */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.375rem', marginBottom: '1.25rem' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem', marginBottom: '1.1rem' }}>
           {tags.map(t => <span key={t} className="tag">{t}</span>)}
         </div>
 
@@ -137,7 +169,7 @@ function ProjectCard({ project, lead = false }) {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-ghost"
-              style={{ fontSize: '0.8rem', padding: '0.45rem 1rem' }}
+              style={{ fontSize: '0.8rem', padding: '0.42rem 1rem' }}
             >
               GitHub →
             </a>
@@ -148,15 +180,10 @@ function ProjectCard({ project, lead = false }) {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
-              style={{ fontSize: '0.8rem', padding: '0.45rem 1rem' }}
+              style={{ fontSize: '0.8rem', padding: '0.42rem 1rem' }}
             >
               Live Demo →
             </a>
-          )}
-          {!github && !demo && (
-            <span style={{ fontSize: '0.78rem', color: 'var(--text-2)', alignSelf: 'center' }}>
-              Private / Academic
-            </span>
           )}
         </div>
       </div>
@@ -196,15 +223,15 @@ export default function Work() {
         </p>
       </div>
 
-      {/* Lead project (full width) */}
+      {/* Lead project */}
       <div style={{ marginBottom: '1.5rem' }}>
         <ProjectCard project={lead} lead />
       </div>
 
-      {/* Paired row */}
+      {/* Paired rows */}
       <div style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
         gap: '1.5rem',
       }}>
         {rest.map(p => <ProjectCard key={p.id} project={p} />)}
