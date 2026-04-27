@@ -148,7 +148,7 @@ a { color: inherit; text-decoration: none; }
 
 /* ── Glass card ── */
 .card, .cinema-card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.022), rgba(255,255,255,0.007));
+  background: linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.045));
   border: 1px solid var(--line-2);
   border-radius: 16px;
   backdrop-filter: blur(28px) saturate(160%);
@@ -262,7 +262,7 @@ a { color: inherit; text-decoration: none; }
 .proj-title    { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; margin: 0 0 10px; }
 .proj-title-sm { font-size: 19px; font-weight: 600; letter-spacing: -0.015em; margin: 0 0 10px; }
 .proj-body     { font-size: 14px; color: var(--ink-dim); line-height: 1.6; margin: 0; }
-.proj-mini     { transition: border-color .2s; }
+.proj-mini     { transition: transform 0.56s ease, box-shadow 0.56s ease, border-color .2s; }
 .proj-mini:hover { border-color: rgba(236,232,223,0.18); }
 
 /* ── Responsibility list ── */
