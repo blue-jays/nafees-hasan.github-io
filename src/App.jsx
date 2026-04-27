@@ -191,7 +191,6 @@ export default function App() {
         <div className="pf-nav-pill">
           <button className="pf-nav-brand" onClick={() => doNavigate('/')}>
             <span className="dot" />
-            Nafees
           </button>
           {NAV.map(({ path, label }) => (
             <button key={path}
