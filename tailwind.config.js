@@ -6,41 +6,28 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        primary: "#121212",
-        secondary: "#1e1e1e",
-        accent: {
-          blue: "#2196F3",
-          lightBlue: "#64B5F6",
-          darkBlue: "#0D47A1"
-        }
-      },
       fontFamily: {
-        sans: ['Poppins', 'Inter', 'Montserrat', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
       },
-      animation: {
-        fadeIn: 'fadeIn 1s ease-in-out',
-        fadeOut: 'fadeOut 1s ease-in-out',
-        blink: 'blink 1s step-end infinite',
+      colors: {
+        'bg-0': '#121010',
+        'bg-1': '#1a1515',
+        'bg-2': '#231d1c',
+        'text-0': '#f3eee7',
+        'text-1': '#c9bfb2',
+        'text-2': '#93897b',
+        'line-0': '#2d2625',
+        'line-1': '#413736',
+        'accent-red': '#8c3836',
       },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
-        fadeOut: {
-          '0%': { opacity: '1' },
-          '100%': { opacity: '0' },
-        },
-        blink: {
-          '0%, 100%': { opacity: '1' },
-          '50%': { opacity: '0' },
-        },
+      borderRadius: {
+        '4xl': '2rem',
+      },
+      boxShadow: {
+        card: '0 18px 60px rgba(0,0,0,0.28)',
+        'card-lg': '0 24px 80px rgba(0,0,0,0.36)',
       },
     },
   },
   plugins: [],
-  future: {
-    hoverOnlyWhenSupported: true,
-  },
 }
