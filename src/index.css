@@ -87,10 +87,10 @@ a { color: inherit; text-decoration: none; }
   display: flex; align-items: center; gap: 4px; padding: 6px;
   background: rgba(16,19,23,0.65);
   border: 1px solid var(--line-2);
-  backdrop-filter: blur(20px) saturate(140%);
-  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  backdrop-filter: blur(28px) saturate(160%);
+  -webkit-backdrop-filter: blur(28px) saturate(160%);
   border-radius: 999px;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset, 0 12px 40px rgba(0,0,0,0.35);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06) inset, 0 12px 40px rgba(0,0,0,0.35);
 }
 .pf-nav-brand {
   display: flex; align-items: center; gap: 8px;
@@ -148,18 +148,18 @@ a { color: inherit; text-decoration: none; }
 
 /* ── Glass card ── */
 .card, .cinema-card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.012));
+  background: linear-gradient(180deg, rgba(255,255,255,0.022), rgba(255,255,255,0.007));
   border: 1px solid var(--line-2);
   border-radius: 16px;
-  backdrop-filter: blur(18px) saturate(130%);
-  -webkit-backdrop-filter: blur(18px) saturate(130%);
-  box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset, 0 20px 50px rgba(0,0,0,0.30);
-  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  backdrop-filter: blur(28px) saturate(160%);
+  -webkit-backdrop-filter: blur(28px) saturate(160%);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06) inset, 0 20px 50px rgba(0,0,0,0.30);
+  transition: transform 0.56s ease, box-shadow 0.56s ease;
 }
 .card:hover, .cinema-card:hover {
   transform: translateY(-6px);
   box-shadow:
-    0 1px 0 rgba(255,255,255,0.07) inset,
+    0 1px 0 rgba(255,255,255,0.10) inset,
     0 30px 60px rgba(0,0,0,0.40),
     0 0 40px oklch(0.78 0.14 145 / 0.12),
     0 0 0 1px oklch(0.78 0.14 145 / 0.15);
