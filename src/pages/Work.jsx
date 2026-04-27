@@ -36,18 +36,6 @@ const PROJECTS = [
     status: 'Open Source',
   },
   {
-    id: 3,
-    title: 'Cloud-Native Task Manager',
-    subtitle: 'React · Node.js · MongoDB · AWS',
-    description:
-      'Full-stack web application with React, Node.js, and MongoDB deployed on AWS.',
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop',
-    tags: ['React', 'Node.js', 'MongoDB', 'AWS'],
-    github: 'https://github.com/blue-jays/task-manager',
-    demo: 'https://task-manager.nafees-hasan.com',
-    status: 'Live Demo',
-  },
-  {
     id: 4,
     title: 'Loan Default Risk Analysis',
     subtitle: 'Python · Statistics · Risk Modelling',
